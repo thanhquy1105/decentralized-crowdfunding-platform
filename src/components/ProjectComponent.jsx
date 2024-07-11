@@ -150,6 +150,11 @@ function ProjectComponent(props) {
 
   // sets the condition true for payment modal to render 
   function onClickPayment() {
+    console.log(props.userAddress)
+    if(!props.userAddress) {
+      props.connectMetamask()
+      return
+    }
     setModalShow(true);
   }
 
@@ -226,7 +231,7 @@ function ProjectComponent(props) {
 
   // check if claiming refund is possible for the user
   function claimRefundCheck() {
-      return (projectDetails.refundPolicy ? false : (projectDetails.amountRaised < projectDetails.fundingGoal));
+      return (projectDetails.refundPolicy ? false : (projectDetails.amountRaised / PRECISION < projectDetails.fundingGoal / PRECISION));
   }
 
   // claim refund by calling the function in the smart contract
@@ -274,7 +279,7 @@ function ProjectComponent(props) {
           <div className="projectImage">
             <img
               src={
-                projectDetails.cid ? "https://" + projectDetails.cid : dummyPic
+                projectDetails.cid ? projectDetails.cid : dummyPic
               }
               alt="test-pic"
             />
@@ -302,7 +307,7 @@ function ProjectComponent(props) {
             </div>
             <p className="afterSupporterContainer">nhà tài trợ</p>
             <div className="remainingDaysContainer">
-              <h2>{!isOver ? timerString : "Funding duration over!!"}</h2>
+              <h2>{!isOver ? timerString : "Thời gian gây quỹ đã hết!!"}</h2>
             </div>
             {!isOver && (
               <p className="afterRemainingDaysContainer">
@@ -315,7 +320,7 @@ function ProjectComponent(props) {
                   className="supportButton"
                   onClick={() => onClickPayment()}
                 >
-                  Back this project
+                  Ủng hộ dự án này
                 </button>
               </div>
             )) : isOwner() ? ((claimFundCheck() && !projectDetails.claimedAmount) ? (
@@ -352,7 +357,7 @@ function ProjectComponent(props) {
         </div>
         <div className="projectBottomContainer">
           <div className="aboutContainer">
-            <h1 className="about">About</h1>
+            <h1 className="about">Giới thiệu</h1>
             <p className="description">{projectDetails.projectDescription}</p>
           </div>
           <div className="projectLinkContainerWrapper">

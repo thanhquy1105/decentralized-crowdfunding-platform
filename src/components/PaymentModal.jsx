@@ -51,7 +51,7 @@ function PaymentModal(props) {
       </div>
       <div className="modalContent">
         <div className="paymentForm">
-          <label className="paymentLabel">Amount (AVAX)</label>
+          <label className="paymentLabel">Số lượng (AVAX)</label>
           <input
             type="number"
             name="payment"
@@ -65,7 +65,7 @@ function PaymentModal(props) {
             required
           />
           <button className="submit" onClick={() => sendFund()}>
-            Fund
+            Xác nhận góp quỹ
           </button>
         </div>
       </div>

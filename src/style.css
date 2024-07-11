@@ -371,7 +371,7 @@ a {
 }
 
 .recentUploads {
-  height: 563px;
+  height: 440px;
   border-bottom: 0.1rem solid #dcdedd;
   width: 80%;
   padding: 0px 10%;
@@ -428,7 +428,7 @@ a {
   width: 300px;
   display: inline-block;
   height: 100%;
-  padding: 40px 15px 0px 0px;
+  background-color: white;
 }
 
 .cardImg {
@@ -438,18 +438,18 @@ a {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  min-height: 169px;
 }
 
 .cardDetail {
   width: 100%;
-  height: 55%;
 }
 
 .cardTitle {
   font-family: "Open Sans";
-  padding: 12px 0px;
+  padding: 12px 10px;
   font-size: 19px;
-  font-weight: 500;
+  font-weight: 600;
   color: #282828;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -465,10 +465,11 @@ a {
   font-size: 18px;
   color: #282828;
   letter-spacing: 0.5px;
-  max-height: 42px;
+  height: 42px;
   position: relative;
   white-space: initial;
   overflow-y: hidden;
+  padding: 0 10px;
 }
 
 .cardDesc::after {
@@ -483,10 +484,10 @@ a {
   color: #656969;
   font-family: "Open Sans";
   font-size: 15px;
-  width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding: 0 10px;
 }
 
 /* Footer CSS class */
@@ -617,6 +618,11 @@ textarea {
 .create-form {
   background: white;
   padding: 20px;
+  background: url(./assets/bg11.png) left no-repeat,
+  url(./assets/bg33.png) right no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  background-size: auto;
 }
 
 h1 {
@@ -819,19 +825,27 @@ form {
   justify-content: space-around;
   overflow-x: auto;
   overflow-y: auto;
+  background: url(./assets/bg11.png) left no-repeat,
+  url(./assets/bg33.png) right no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  background-size: auto;
+  background-color: #0000000d;
 }
 
 .projectCardWrapper {
-  height: 380px;
+  height: 330px;
   display: inline-block;
-  margin: 0px 0px 0px 20px;
+  /* margin: 0px 0px 0px 20px; */
   /* background-color: #037362; */
+  margin-bottom: 2rem;
 }
 
 /* Project page css */
 
 .projectContainer {
   margin-bottom: 10%;
+  background-color: #0000000a;
 }
 
 .projectHeading {
@@ -870,11 +884,11 @@ form {
   width: 95%;
   height: 1em;
   background: white;
-  color: #037362;
+  color: #c65a11;
 }
 
 .fundingValue h2 {
-  color: #037362;
+  color: #c65a11;
   font-size: 2.2em;
   margin-bottom: 0%;
 }
@@ -882,7 +896,6 @@ form {
 .goalValueContainer {
   margin-top: 1%;
   position: relative;
-  margin-left: 1%;
   font-size: 110%;
   color: #383535;
 }
@@ -921,7 +934,7 @@ form {
 
 .supportButtonContainer {
   margin-top: 10%;
-  margin-left: 25%;
+  margin-left:auto;
 }
 
 .supportButton {
@@ -930,14 +943,14 @@ form {
   padding-right: 18%;
   padding-top: 2%;
   padding-bottom: 2%;
-  background: green;
+  background: #c65a11;
   border: 0;
   color: white;
   cursor: pointer;
 }
 
 .supportButton:hover {
-  background: darkgreen;
+  background: #e87427;
 }
 
 .projectBottomContainer {
@@ -960,7 +973,7 @@ form {
 .description {
   font-size: 1.5em;
 }
-
+/* 
 .projectLinkContainer {
   padding-left: 1%;
   background: #037362;
@@ -984,8 +997,8 @@ form {
 
 .projectLinkContainer:hover .projectLink {
   color: #282828;
-}
-
+} */
+/* 
 .projectLinkContainerWrapper {
   display: flex;
   width: 100%;
@@ -1013,7 +1026,7 @@ form {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-}
+}*/
 
 .contributorHeader {
   width: 80%;
@@ -1023,7 +1036,7 @@ form {
   font-family: "Open Sans";
   font-weight: 800;
   margin-top: 40px;
-}
+} 
 
 .contributors {
   width: 80%;
@@ -1114,7 +1127,7 @@ form {
 }
 
 .projectsContainer {
-  margin-top: 80px;
+  margin-top: 20px;
 }
 
 /* Payment modal */
@@ -1227,44 +1240,92 @@ form {
   }
 }
 
-
-
-/* Stats container */
 .stats {
   display: flex;
-  justify-content: space-around; /* Space out the columns evenly */
-  align-items: center; /* Center the items vertically */
-  width: 80%; /* Width of the stats container */
-  max-width: 1200px; /* Maximum width for larger screens */
-  margin: 0 auto; /* Center the stats container */
+  justify-content: space-around;
+  align-items: center;
+  width: 80%; 
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Individual stat item styling */
 .statItem {
-  text-align: center; /* Center the text within each column */
-  flex: 1; /* Make each statItem take equal space */
-  margin: 0 10px; /* Horizontal spacing between columns */
-  background: #ffffff; /* White background for each statItem */
-  padding: 20px; /* Padding inside each statItem */
-  border-radius: 10px; /* Rounded corners for each statItem */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for each statItem */
-  transition: transform 0.3s ease; /* Smooth transition for hover effects */
+  text-align: center; 
+  flex: 1; 
+  margin: 0 10px; 
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease; 
 }
 
 .statItem:hover {
-  transform: translateY(-10px); /* Lift the statItem slightly on hover */
+  transform: translateY(-10px);
 }
 
 /* Value text styling */
 .statItemValue {
-  font-size: 28px; /* Larger font size for the value */
-  font-weight: bold; /* Bold font for the value */
-  color: #4a90e2; /* Blue color for the value text */
-  margin-bottom: 8px; /* Space between value and tag */
+  font-size: 28px; 
+  font-weight: bold;
+  color: #4a90e2;
+  margin-bottom: 8px; 
 }
 
-/* Tag text styling */
 .statItemTag {
-  font-size: 16px; /* Smaller font size for the tag */
-  color: #666; /* Medium grey color for the tag text */
+  font-size: 16px; 
+  color: #666; 
+}
+
+.projectLinkContainerWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  background-color: #fff; /* White background color */
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* More prominent shadow */
+  max-width: 800px;
+  margin: 20px auto; /* Center the container horizontally */
+  border: 1px solid #e0e0e0; /* Light border for definition */
+}
+
+/* Individual container styling */
+.projectLinkContainer {
+  margin-bottom: 20px; /* Space between items */
+}
+
+.projectLinkLabel {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333; /* Dark text color */
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px; /* Space between label and value */
+}
+
+.projectLink {
+  color: #007bff; /* Blue color for links */
+  text-decoration: none; /* Remove underline */
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.projectLink:hover {
+  color: #0056b3; /* Darker blue on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+
+.projectLinkLabel a {
+  color: #007bff; /* Blue color for links */
+  text-decoration: none; /* Remove underline */
+  font-weight: 600;
+  margin-left: 5px; /* Space between label and link */
+  transition: color 0.3s ease;
+}
+
+.projectLinkLabel a:hover {
+  color: #0056b3; /* Darker blue on hover */
+  text-decoration: underline; /* Underline on hover */
 }

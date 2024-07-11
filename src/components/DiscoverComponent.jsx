@@ -64,14 +64,13 @@ export default function DiscoverComponent(props) {
         <Link to="/project" state={{ index: project.index }} key={index}>
           <div className="projectCardWrapper">
             <div className="projectCard">
-              <div
+              <img
                 className="cardImg"
-                style={{
-                  backgroundImage: project.cid
-                    ? `url(${"https://" + project.cid})`
-                    : dummyPic,
-                }}
-              ></div>
+                src={
+                  project.cid ? project.cid : dummyPic
+                }
+                alt="test-pic"
+              />
               <div className="cardDetail">
                 <div className="cardTitle">{project.projectName}</div>
                 <div className="cardDesc">{project.projectDescription}</div>

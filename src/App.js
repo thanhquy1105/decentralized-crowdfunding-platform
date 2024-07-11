@@ -10,7 +10,8 @@ import ProfileComponent from "./components/ProfileComponent";
 import { useEffect, useState } from "react";
 import { ethers } from "ethers";
 import { abi } from "./abi";
-const CONTRACT_ADDRESS = "0xad7C61FC480E5EEBA7886Fc62A789F9921caC9d7";
+const CONTRACT_ADDRESS = "0xad7C61FC480E5EEBA7886Fc62A789F9921caC9d7"; 
+// const CONTRACT_ADDRESS = "0xa5a46fe5338a34be4de3f3396ff2aeea8548ffe3"; 
 
 function App() {
   const [myContract, setMyContract] = useState(null);
@@ -139,7 +140,7 @@ function App() {
           <Route
             path="project"
             element={
-              <ProjectComponent contract={myContract} userAddress={address} />
+              <ProjectComponent contract={myContract} userAddress={address} connectMetamask={connect}/>
             }
           />
         </Routes>

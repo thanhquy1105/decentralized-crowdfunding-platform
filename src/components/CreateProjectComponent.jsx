@@ -206,7 +206,7 @@ function CreateProjectComponent(props) {
           <option value="refundable">Refundable</option>
           <option value="non-refundable">Non-Refundable</option>
         </select>
-        <input type="submit" className="submitButton" value="Submit" />
+        <input type="submit" className="submitButton" value="Tạo dự án" />
       </form>
     </div>
   );

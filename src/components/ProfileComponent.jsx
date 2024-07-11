@@ -126,7 +126,7 @@ function ProfileComponent(props) {
           <div className="projectList">
             <ScrollShowbarComponent
               recentUploads={ongoingProjects}
-              heading={"ONGOING PROJECTS"}
+              heading={"DỰ ÁN ĐANG DIỄN RA"}
               emptyMessage={"No ongoing projects"}
             />
           </div>
@@ -139,7 +139,7 @@ function ProfileComponent(props) {
           <div className="projectList">
             <ScrollShowbarComponent
               recentUploads={completedProjects}
-              heading={"COMPLETED PROJECTS"}
+              heading={"DỰ ÁN ĐÃ HOÀN THÀNH"}
               emptyMessage={"No completed projects"}
             />
           </div>
@@ -152,7 +152,7 @@ function ProfileComponent(props) {
           <div className="projectList">
             <ScrollShowbarComponent
               recentUploads={userFundedProjects}
-              heading={"PROJECTS FUNDED"}
+              heading={"DỰ ÁN ĐÃ ỦNG HỘ"}
               emptyMessage={"No projects funded yet"}
             />
           </div>
