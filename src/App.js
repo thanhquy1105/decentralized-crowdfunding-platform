@@ -10,8 +10,11 @@ import ProfileComponent from "./components/ProfileComponent";
 import { useEffect, useState } from "react";
 import { ethers } from "ethers";
 import { abi } from "./abi";
-const CONTRACT_ADDRESS = "0xad7C61FC480E5EEBA7886Fc62A789F9921caC9d7"; 
+// const CONTRACT_ADDRESS = "0xad7C61FC480E5EEBA7886Fc62A789F9921caC9d7"; 
 // const CONTRACT_ADDRESS = "0xa5a46fe5338a34be4de3f3396ff2aeea8548ffe3"; 
+// const CONTRACT_ADDRESS = "0xbea4c31153716db710b0a1f0e7d9b65a6a74e709"; 
+// const CONTRACT_ADDRESS = "0x73657DbDFDD717B7c54bD16E2f9D783543815497"; 
+const CONTRACT_ADDRESS = "0x3F32695E2f02D320d975873D9bEa043Ef1D6d3f0"; 
 
 function App() {
   const [myContract, setMyContract] = useState(null);

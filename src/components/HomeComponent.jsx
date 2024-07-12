@@ -67,14 +67,13 @@ export default function HomeComponent(props) {
       return (
         <div className="recommendationCard" key={index}>
           <Link to="/project" state={{ index: project.index }}>
-            <div
+            <img
               className="rcmdCardImg"
-              style={{
-                backgroundImage: project.cid
-                  ? `url(${"https://" + project.cid})`
-                  : dummyPic,
-              }}
-            ></div>
+              src={
+                project.cid ? project.cid : dummyPic
+              }
+              alt="test-pic"
+            />
           </Link>
           <div className="rcmdCardDetails">
             <div className="rcmdCardHeading">
@@ -130,14 +129,13 @@ export default function HomeComponent(props) {
             <div className="featuredCard">
               <div className="featuredHeading">DỰ ÁN NỔI BẬT</div>
               <Link to="/project" state={{ index: featuredRcmd[0].index }}>
-                <div
+                <img
                   className="featuredCardProjectImg"
-                  style={{
-                    backgroundImage: featuredRcmd[0].cid
-                      ? `url(${"https://" + featuredRcmd[0].cid})`
-                      : dummyPic,
-                  }}
-                ></div>
+                  src={
+                    featuredRcmd[0].cid ? featuredRcmd[0].cid : dummyPic
+                  }
+                  alt="test-pic"
+                />
               </Link>
               <div className="featuredProjectHeading">
                 <Link to="/project" state={{ index: featuredRcmd[0].index }}>
